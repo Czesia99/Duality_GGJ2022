@@ -6,6 +6,7 @@ public class Shooting : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public GameObject laserPrefab;
 
     public float bulletForce = 20f;
     // Start is called before the first frame update
@@ -18,8 +19,10 @@ public class Shooting : MonoBehaviour
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
-        {
             Shoot();
+        if (Input.GetButtonDown("Fire2"))
+        {
+            ShootLaser();
         }
     }
 
@@ -28,5 +31,14 @@ public class Shooting : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+    }
+
+    void ShootLaser()
+    {
+        GameObject laser = Instantiate(laserPrefab, firePoint.position, firePoint.rotation);
+        if (Input.GetButtonUp("Fire2"))
+            Destroy(laser);
+        // Rigidbody2D rb = laser.GetComponent<Rigidbody2D>();
+        // rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
     }
 }

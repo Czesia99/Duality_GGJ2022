@@ -12,6 +12,7 @@ public class ManageDimension : MonoBehaviour
     // Update is called once per frame
     void Start() 
     {
+        cam = Camera.main;
         cir = gameObject.GetComponent<CircleCollider2D>();
         sr = gameObject.GetComponent<SpriteRenderer>();
         objectColor = sr.color;  

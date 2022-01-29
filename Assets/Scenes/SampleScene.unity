@@ -261,6 +261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1833141605}
   bulletPrefab: {fileID: 4213297070780072064, guid: 8e5cf48825bb978f9b3a643941f48aec, type: 3}
+  laserPrefab: {fileID: 8814420389309424106, guid: b41c85c63c4856a24a4e6a2258fb31e6, type: 3}
   bulletForce: 20
 --- !u!61 &35106591
 BoxCollider2D:
@@ -514,8 +515,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1693794979
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.4811321, g: 0, b: 0, a: 1}
@@ -1215,7 +1216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1833141605}
   m_Layer: 10
-  m_Name: firePoint
+  m_Name: bulletPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
     void Start() 
     {
+        cam = Camera.main;
         sr = gameObject.GetComponent<SpriteRenderer>();
     }
     // Update is called once per frame
