@@ -17,7 +17,7 @@ TagManager:
   - 
   - Obstacle
   - Bullet
-  - 
+  - Player
   - 
   - 
   - 
@@ -42,4 +42,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Bullet
+    uniqueID: 327597009
+    locked: 0
+  - name: Obstacle
+    uniqueID: 3713559231
+    locked: 0
+  - name: Player
+    uniqueID: 1693794979
     locked: 0
