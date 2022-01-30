@@ -17,7 +17,7 @@ public class Bullet : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (cam.backgroundColor == black)
             sr.color = white;
@@ -27,9 +27,11 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Enemy") {
             other.gameObject.GetComponent<Enemy>().UpdateHealth(-dmg);
-        // if (collision.gameObject.tag == "Obstacle")
+            ScoreCounter.score += 1;
+        }
         Destroy(gameObject);
+        // if (collision.gameObject.tag == "Obstacle")
     }
 }

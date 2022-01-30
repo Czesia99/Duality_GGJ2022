@@ -17,7 +17,7 @@ public class PlayerHealth : MonoBehaviour
     {
         health += mod;
         if (health <= 0f) {
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("End");
             Debug.Log("DEAD / LOAD MENU");
         }
     }
