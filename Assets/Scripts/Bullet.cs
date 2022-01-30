@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     Color white = Color.white;
     Color black = Color.black;
     SpriteRenderer sr;
+    [SerializeField] private float dmg = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +25,10 @@ public class Bullet : MonoBehaviour
             sr.color = black;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D other)
     {
+        if (other.gameObject.tag == "Enemy")
+            other.gameObject.GetComponent<Enemy>().UpdateHealth(-dmg);
         // if (collision.gameObject.tag == "Obstacle")
         Destroy(gameObject);
     }

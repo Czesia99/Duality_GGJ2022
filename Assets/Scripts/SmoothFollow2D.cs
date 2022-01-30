@@ -10,7 +10,7 @@ public class SmoothFollow2D : MonoBehaviour {
     public float m_XOffset = 0;
     public float m_YOffset = 0;
 
-	private float margin = 0f;
+	private float margin = 1f;
 
 	void Start () {
 		if (m_Target==null){

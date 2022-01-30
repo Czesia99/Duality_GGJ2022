@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - Bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -13,11 +14,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Enemy
   - Obstacle
   - Bullet
   - Player
+  - 
   - 
   - 
   - 
@@ -43,11 +44,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Bullet
-    uniqueID: 327597009
+  - name: Enemy
+    uniqueID: 2790880351
     locked: 0
   - name: Obstacle
     uniqueID: 3713559231
+    locked: 0
+  - name: Bullet
+    uniqueID: 327597009
     locked: 0
   - name: Player
     uniqueID: 1693794979
