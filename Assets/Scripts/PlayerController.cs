@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     Color white = Color.white;
     Color black = Color.black;
     SpriteRenderer sr = null;
+    public Sprite w;
+    public Sprite b;
 
     void Start() 
     {
@@ -43,8 +45,8 @@ public class PlayerController : MonoBehaviour
     void PlayerColor()
     {
         if (cam.backgroundColor == black)
-            sr.color = white;
+            sr.sprite = b;
         else
-            sr.color = black;
+            sr.sprite = w;
     }
 }

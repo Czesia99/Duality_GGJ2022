@@ -38,19 +38,19 @@ public class ManageDimension : MonoBehaviour
     }
     void Update()
     {
-        if (cam.backgroundColor == dimension) {
+        if (cam.backgroundColor != dimension) {
             // Debug.Log("1");
             // Debug.Log(dimension);
             // Debug.Log(cam.backgroundColor);
-            if (cir)
+            if (cir && gameObject.tag != "Enemy")
                 cir.enabled = false;
-            if (pol)
+            if (pol && gameObject.tag != "Enemy")
                 pol.enabled = false;
-            if (box)
+            if (box && gameObject.tag != "Enemy")
                 box.enabled = false;
             sr.enabled = false;
         }
-        else if (cam.backgroundColor != dimension) {
+        else if (cam.backgroundColor == dimension) {
             // Debug.Log("0");
             // Debug.Log(dimension);
             // Debug.Log(cam.backgroundColor);
